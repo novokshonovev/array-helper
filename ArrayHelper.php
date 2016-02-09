@@ -37,9 +37,9 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
     {
         $base = array_sum($array);
         if ($normalize) {
-            return ArrayHelper::normalize(ArrayHelper::percentsOfBase($base, $array, $percentageAccuracy), $percentageAccuracy);
+            return self::normalize(self::percentsOfBase($base, $array, $percentageAccuracy), $percentageAccuracy);
         } else {
-            return ArrayHelper::percentsOfBase($base, $array, $percentageAccuracy);
+            return self::percentsOfBase($base, $array, $percentageAccuracy);
         }
 
     }
